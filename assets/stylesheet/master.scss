@@ -1,0 +1,367 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
+h1 {
+    padding: 50px 0 100px 0;
+
+    font-size: 5rem;
+    text-align: center;
+    background-image: linear-gradient(  #F7E320 , #F8812C );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+section {
+    >.row {
+        align-items: center;
+        justify-content: center;
+        transform-style: preserve-3d;
+
+        >div {
+            width: 250px;
+            height: 350px;
+            margin: 20px;
+            background-color: rgb(255, 255, 255);
+            clip-path: polygon(0 0, 100% 0%, 100% 85%, 50% 100%, 0 85%);
+            transform: perspective(800px) rotateY(90deg);
+            animation: transform 2s 2s forwards;
+
+            &:nth-of-type(1) {
+                >.row {
+                    background-image: linear-gradient(#0ecbbb, #0ca79a);
+                }
+
+                >.row>h2>.row>a {
+                    &:nth-of-type(2) {
+                        background-image: linear-gradient(#0ecbbb, #0ca79a);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        width: 0;
+                    }
+                }
+
+                svg>circle {
+                    animation: progress1 5s 5.2s forwards ease-in-out;
+
+                }
+
+                >.row>.row>span>span {
+                    animation: prg-rec1 5.2s 5s ease-in-out forwards;
+
+                }
+            }
+
+            &:nth-of-type(3) {
+                >.row {
+                    background-image: linear-gradient(#F5246C, #CE0D4A);
+                }
+
+                >.row>h2>.row>a {
+                    &:nth-of-type(2) {
+                        background-image: linear-gradient(#F5246C, #CE0D4A);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        width: 0;
+                    }
+                }
+
+                svg>circle {
+                    animation: progress3 5s 5.2s forwards ease-in-out;
+                }
+
+                >.row>.row>span>span {
+                    animation: prg-rec3 5.2s 5s ease-in-out forwards;
+
+                }
+            }
+
+            &:nth-of-type(2) {
+                >.row {
+                    background-image: linear-gradient(#F7E320, #F8812C);
+                }
+
+                >.row>h2>.row>a {
+                    &:nth-of-type(2) {
+                        background-image: linear-gradient(#F7E320, #F8812C);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        width: 0;
+                    }
+                }
+
+                svg>circle {
+                    animation: progress2 5s 5.2s forwards ease-in-out;
+
+                }
+
+                >.row>.row>span>span {
+                    animation: prg-rec2 5.2s 5s ease-in-out forwards;
+
+                }
+            }
+
+            >.row {
+                width: 0;
+                animation: width 1s 4s forwards;
+
+                >.row {
+                    width: 100%;
+                    height: 240px;
+                    color: rgb(255, 255, 255);
+                    padding: 20px;
+
+                    >div {
+                        height: 60%;
+                        position: relative;
+
+                        >div {
+                            width: 100px;
+                            height: 100px;
+                            border-radius: 50%;
+                            border: 10px solid rgba(240, 248, 255, 0.349);
+                            margin: 0 auto;
+                            transform: translate(55px, 8px);
+                            // box-shadow: 2px 2px 2px rgb(53, 53, 53), -2px -2px 2px rgb(255, 255, 255), inset 2px 2px 2px rgb(53, 53, 53), inset -2px -2px 2px rgb(255, 255, 255);
+                            animation: shadow 1s 5s forwards;
+                        }
+
+                        >svg {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+
+                            >circle {
+                                fill: transparent;
+                                stroke-width: 15px;
+                                stroke: white;
+                                stroke-width: 10px;
+                                stroke-dasharray: 0 314px;
+                                overflow: hidden;
+                            }
+
+                            >text {
+                                font-size: 1.6rem;
+                                font-weight: bold;
+                                fill: rgba(255, 255, 255, 0.767);
+
+                            }
+                        }
+                    }
+
+                    >h2 {
+                        width: 100%;
+                        margin-top: 10px;
+                    }
+
+                    >p {
+                        width: 100%;
+                        margin-top: 10px;
+
+                    }
+
+                    >span {
+                        margin-top: 10px;
+                        position: relative;
+                        width: 98%;
+                        height: 5px;
+                        border-radius: 10px;
+                        background-color: rgba(219, 219, 219, 0.37);
+
+                        >span {
+                            position: absolute;
+                            border-radius: 10px;
+                            top: 0;
+                            left: 0;
+                            width: 0;
+                            height: 5px;
+                            background-color: white;
+
+                        }
+
+                    }
+
+                }
+
+                >h2 {
+                    width: 300px;
+                    padding: 20px;
+                    height: 20%;
+                    background-color: white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    >.row {
+                        position: relative;
+                        overflow: hidden;
+                        width: 110px;
+                        height: 50px;
+                        margin: 0 auto;
+                        overflow: hidden;
+                        width: 0;
+                        animation: width2 1s 5s forwards;
+
+                        &:hover {
+                            >a {
+                                &:nth-of-type(2) {
+                                    width: 100%;
+                                }
+                            }
+                        }
+
+                        >a {
+                            position: absolute;
+                            font-size: 1.8rem;
+                            font-weight: bold;
+                            top: 0;
+
+                            height: 100%;
+                            text-decoration: none;
+                            color: black;
+                            transition: 2s;
+
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes transform {
+    0% {
+        transform: perspective(800px) rotatey(190deg);
+    }
+
+    100% {
+        transform: perspective(800px) rotatey(0deg);
+    }
+
+}
+
+@keyframes width {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+
+}
+
+@keyframes width2 {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 110px;
+    }
+
+}
+
+@keyframes shadow {
+    0% {
+        box-shadow: 0;
+    }
+
+    100% {
+        box-shadow: 2px 2px 2px rgb(53, 53, 53), inset 2px 2px 2px rgb(53, 53, 53), inset -2px -2px 2px rgb(255, 255, 255);
+
+    }
+
+}
+
+@keyframes progress1 {
+    0% {
+        stroke-dasharray: 0 314px;
+    }
+
+    100% {
+
+        stroke-dasharray: 254px 70px;
+
+        stroke-linecap: round;
+
+    }
+}
+
+@keyframes progress2 {
+    0% {
+        stroke-dasharray: 0 314px;
+    }
+
+    100% {
+
+        stroke-dasharray: 224px 90px;
+
+        stroke-linecap: round;
+
+    }
+}
+
+@keyframes progress3 {
+    0% {
+        stroke-dasharray: 0 314px;
+    }
+
+    100% {
+
+        stroke-dasharray: 184px 130px;
+
+        stroke-linecap: round;
+
+    }
+}
+
+@keyframes prg-rec1 {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 90%;
+    }
+
+}
+
+@keyframes prg-rec2 {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 80%;
+    }
+
+}
+
+@keyframes prg-rec3 {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 70%;
+    }
+
+}
